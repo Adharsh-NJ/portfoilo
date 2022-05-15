@@ -1,0 +1,285 @@
+@-webkit-keyframes moveDownToUp-LtoR {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-3rem, 5rem);
+            transform: translate(-3rem, 5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveDownToUp-LtoR {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-3rem, 5rem);
+            transform: translate(-3rem, 5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveDownToUp-RtoL {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(3rem, 5rem);
+            transform: translate(3rem, 5rem);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveDownToUp-RtoL {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(3rem, 5rem);
+            transform: translate(3rem, 5rem);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes LtoR {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes LtoR {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0) scale(0.4);
+            transform: rotate(0) scale(0.4);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0) scale(0.4);
+            transform: rotate(0) scale(0.4);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+.navBarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #2C3E50;
+  border-radius: 1rem;
+}
+
+.toggleBtn {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 3rem;
+  height: 2.1rem;
+}
+
+.toggleBtn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 65em) {
+  .toggleBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navContainer {
+    display: none;
+  }
+}
+
+.logoContainer {
+  float: left;
+  margin-left: 1rem;
+}
+
+.logoContainer h1 {
+  font-family: 'Yuji Hentaigana Akari', cursive;
+  color: white;
+  -webkit-animation: zoomIn 2s;
+          animation: zoomIn 2s;
+}
+
+.navContainer {
+  margin-right: 2rem;
+}
+
+.navContainer ul {
+  list-style-type: none;
+  -webkit-animation: hide .4s ease-out;
+          animation: hide .4s ease-out;
+}
+
+.navContainer ul li {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  -webkit-animation: LtoR .8s ease-out;
+          animation: LtoR .8s ease-out;
+}
+
+.navContainer ul li:nth-child(4) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.navContainer ul li:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.navContainer ul li:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.navContainer ul li:nth-child(1) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.navContainer ul li:nth-child(0) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.navContainer ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+}
+
+.navContainer ul li a:link, .navContainer ul li a:visited {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.navContainer ul li:hover {
+  -webkit-transform: translateY(-0.5rem) scale(0.9);
+          transform: translateY(-0.5rem) scale(0.9);
+  -webkit-box-shadow: 0 1rem 2rem rgba(95, 17, 17, 0.5);
+          box-shadow: 0 1rem 2rem rgba(95, 17, 17, 0.5);
+  border-radius: 2rem;
+  background-color: #18BC9C;
+}
+
+.navContainer ul li:active {
+  -webkit-transform: translateY(0) scale(0.9);
+          transform: translateY(0) scale(0.9);
+  background-color: #18BC9C;
+}
+/*# sourceMappingURL=index.css.map */

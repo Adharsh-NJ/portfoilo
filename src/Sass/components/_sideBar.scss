@@ -1,0 +1,12 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sidebarBtn{
+ color: black !important;
+animation:upToDown 2s ;
+}

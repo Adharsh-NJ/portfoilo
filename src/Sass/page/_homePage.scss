@@ -1,0 +1,185 @@
+@use '../base/animations' as *;
+
+.home-container{
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-content: center;
+    // background-color: red;
+    .center-img{
+        position: relative;
+        width: 10rem;
+        
+         img{
+             position: absolute;
+             height: 12rem;
+            border-radius: 2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-45%);
+            filter: brightness(1.2) contrast(1) saturate(1.2);
+        }
+    }
+    ul{
+        display: grid;
+        place-items: center;
+        position: relative;
+        list-style: none;
+        transform-origin: center;
+        animation: orbit 50s linear infinite;
+        img{
+        height: 3rem !important;
+        }
+        &:hover{
+            animation-play-state: paused;
+            & *{
+                animation-play-state: paused;
+            }
+        }
+    }
+    li{
+        position: absolute;
+        width: 7rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1;
+        display: grid;
+        place-items: center;
+
+    & > p,img{
+   position: absolute;
+   animation: orbit 50s linear reverse infinite;   
+    }
+    // @for $i from 0 through 8{
+    //     &:nth-child(#{$i}){
+    //         --throb-delay:#{500ms * $i};
+    //     }
+    // }
+
+    >div{
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            display: grid;
+            place-items: center;
+            //animation:  throb 1s var(--throb-delay) ease-in-out infinite alternate ;
+    }
+    
+    p{
+     width: 100%;
+     height: 100%;
+     font-size: 1.5rem;
+     font-weight: 500;
+     margin: 0;
+        display: grid;
+        place-items:center ;
+        
+     border-radius: 50%;
+      opacity: 0;
+    }
+    &:hover{
+        p{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+    li:first-child{
+        transform: translate(14rem,0);
+        div{
+            background-color:#212121 ;
+        }
+    
+        p{
+            background-color:#2d2929 ;
+            color: aqua;
+        }
+    }
+    li:nth-child(2){
+        transform: translate(10rem,10rem);
+        div{
+            background-color: antiquewhite;
+        }
+        
+        p{
+            background-color: #212121;
+            color: white;
+        }
+
+    }
+    li:nth-child(3){
+        transform: translate(0,14rem);
+        div{
+            background-color: rgb(222, 188, 66);
+
+        }
+        p{
+            background-color: #2a2810;
+            color: rgb(200, 208, 95);
+        }
+    }
+    li:nth-child(4){
+        transform: translate(-10rem,10rem);
+        div{
+            background-color: rgb(45, 21, 141);
+        }
+        
+        p{
+            background-color: #2a2810;
+            color: rgb(231, 78, 139);
+            font-style: oblique;
+        }
+    }
+    li:nth-child(5){
+        transform: translate(-14rem,0);
+        div{
+            background-color: rgb(255, 46, 92);
+        }
+        
+        p{
+            background-color: #498ab5;
+            color: rgb(10, 14, 69);
+            font-style:italic;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+    }
+    li:nth-child(6){
+        transform: translate(-10rem,-10rem);
+        div{
+            background-color: rgb(33, 188, 57);
+        }
+       
+        p{
+            background-color: #541515;
+            color: rgb(83, 223, 125);
+        }
+    }
+    li:nth-child(7){
+        transform: translate(0,-14rem);
+        div{
+
+            background-color: rgb(64, 189, 143);
+        }
+        p{
+            background-color: #8a4f1e;
+            color: rgb(222, 179, 165);
+            font-weight: 800;
+            font-size: 2rem;
+            font-style: oblique;
+        }
+    }
+    li:nth-child(8){
+        transform: translate(10rem,-10rem);
+        div{
+            background-color: rgb(84, 20, 59);
+        }
+        
+        p{
+            background-color: #b120aa;
+            color: rgb(11, 11, 2);
+            font-weight: 800;
+        }
+    }
+}
